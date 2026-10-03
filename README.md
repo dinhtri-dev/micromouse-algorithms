@@ -1,31 +1,33 @@
-# mms-python
+# Micromouse Algorithms
 
-Write a Micromouse maze-solving algorithm in Python.
+Year2 source archive by dinhtri-dev. Original workspace files are unchanged.
 
-For use with [mackorone/mms](https://github.com/mackorone/mms), a Micromouse simulator.
+## Contents and status
 
-## Setup
+Based on mackorone/mms-python. Local additions include Flood Fill, A*, returning to start and an experimental 45-degree path. The 45-degree experiment requires compatible simulator commands and is not hardware-validated. UCI kit files remain references rather than this repository source.
 
-1. Clone this repository
-1. [Download the Micromouse simulator](https://github.com/mackorone/mms#download)
-1. Run the simulator and click the "+" button to configure a new algorithm
-1. Enter the config for your algorithm (name, directory, and run command)
-1. Click the "Run" button
+## Run / inspect
 
-## Examples
+Configure the mms simulator with this directory and python "flood fill and A quay 90.py" for the 90-degree variant, or python Main.py for the experimental variant.
 
-Windows:
+Install only this project's listed dependencies in a separate virtual environment. Model binaries, large datasets, private configuration and generated output are excluded. Check DATA_AND_MODELS.md when present.
 
-![](https://github.com/mackorone/mms-python/blob/master/config-windows.png)
+## Archive validation
 
-Linux (Ubuntu):
+See ARCHIVE_STATUS.md and SECURITY_REVIEW.md for the exact publication scope, tests and remaining limitations. A successful source-archive check does not certify production deployment, firmware flashing, model accuracy or CAD geometry.
 
-![](https://github.com/mackorone/mms-python/blob/master/config-linux.png)
+## Future work
 
-## Notes
+The consolidated Google document records project-specific fixes, missing functions and suggested features. This commit focuses on reproducible archiving, not implementing that roadmap.
 
-- You may need to download and install [Python](https://www.python.org/downloads/)
-- Spaces in file paths are not allowed, you may need to change the default Python install path
-- Communication with the simulator is done via stdin/stdout, use stderr for logging
-- Descriptions of all available API methods can be found at [mackorone/mms#mouse-api](https://github.com/mackorone/mms#mouse-api)
-- The example code is a simple left wall following algorithm
+## Directory guide
+
+- `__pycache__`
+
+## Tests actually run
+
+Python source compiled without executing model training. virtual 6x6 open maze, explore/return/A*.
+
+## Upstream
+
+Fork of https://github.com/mackorone/mms-python. Original README is retained as README_UPSTREAM.md, and upstream Git history is preserved. Local modifications are separate archive commits.
